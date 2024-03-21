@@ -16,7 +16,7 @@ style = "github-dark"
   info = "IT Journeyman and Part-Time Warlock"
   description = "David Ford's IT Solutions and Blog"
   keywords = "blog,developer,personal,powershell,information technology"
-  avatarurl = "images/avatar.jpg"
+  avatarurl = "img/avatar.jpeg"
   #gravatar = "john.doe@example.com"
 
   faviconSVG = "/img/favicon.svg"
