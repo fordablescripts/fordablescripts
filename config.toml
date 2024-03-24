@@ -97,7 +97,7 @@ url = "posts/"
 #url = "contact/"
 
 [languages.es-mx]
-languageName = ":Mexico:"
+languageName = ":mx:"
 title = "David Ford"
 
 [languages.es-mx.params]
