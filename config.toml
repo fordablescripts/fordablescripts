@@ -98,7 +98,7 @@ url = "posts/"
 
 [languages.es-mx]
 languageName = ":mexico:"
-title = "David Ford"
+title = "FordableScripts"
 
 [languages.es-mx.params]
 author = "David Ford"
