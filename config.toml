@@ -15,7 +15,7 @@ noClasses = false
   description = "David Ford's IT Solutions and Blog"
   keywords = "blog,developer,personal,powershell,information technology"
   avatarurl = "img/avatar.jpeg"
-  favicon = "img/favicon.ico"
+  faviconSVG = "img/favicon.ico"
   favicon_32 = "img/favicon-32x32.png"
   favicon_16 = "img/favicon-16x16.png"
 
