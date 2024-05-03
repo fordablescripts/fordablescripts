@@ -1,7 +1,7 @@
 +++
 authors = "David Ford"
 title = "Sintaxis de Markdown"
-date = "2023-07-13"
+date = "2024-05-03T09:51:58-04:00"
 description = "Artículo de muestra que muestra la sintaxis y el formato básicos de Markdown para elementos HTML."
 tags = [
     "hugo",
