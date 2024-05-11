@@ -76,11 +76,11 @@ Did you catch the Caution paragraph?
 
 `Get-Random doesn't ensure cryptographically secure randomness.`
 
-At this point, a new question emerges; _Do I need cryptographically secure randomness and instead utilize Get-SecureRandom for my script?_ That will depend on your use case. `Get-Random` by default uses the system tick count (in milliseconds) of the elapsed since the system started as a seed number from 0 to [Int32]::MaxValue (Roughly 2 Billion). If you have a script that runs on a schedule, then the chances of generating that same seed number increases which would mean you could create duplicate values.
+At this point, a new question emerges; _Do I need cryptographically secure randomness and instead utilize Get-SecureRandom for my script?_ That will depend on your use case. `Get-Random` by default uses the system tick count (in milliseconds) of the elapsed since the system started as a seed number from 0 to [Int32]::MaxValue (Roughly 2 Billion). If you have a script that runs on a schedule, then the chances of generating that same seed number increases which would mean you could create duplicate values.&#9;
 
-`Get-SecureRandom` on the other hand, with PowerShell 7.4, uses the RandomNumberGenerator Class to ensure an exclusive integer and effectively replaces the previously used `System.Security.Cryptography.RNGCryptoServiceProvider` .NET class.
+`Get-SecureRandom` on the other hand, with PowerShell 7.4, uses the RandomNumberGenerator Class to ensure an exclusive integer and replaces the previously used `System.Security.Cryptography.RNGCryptoServiceProvider` .NET class.&#9;
 
-Matt Graeber wrote a lovely post back in 2014 that covered the effectiveness of `Get-Random` in comparison to using `System.Security.Cryptography.RNGCryptoServiceProvider` .NET class.
+Matt Graeber wrote a post back in 2014 that covered the effectiveness of `Get-Random` in comparison to using `System.Security.Cryptography.RNGCryptoServiceProvider` .NET class.&#9;
 
 Please visit Matt's post for more information on those differences:  
   https://powershellmagazine.com/2014/07/28/testing-the-effectiveness-of-get-random/
