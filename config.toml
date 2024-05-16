@@ -109,19 +109,19 @@ keywords = "blog,desarrollador,tecnología de la información"
 [[languages.es-mx.menu.main]]
 name = "Sobre"
 weight = 1
-url = "sobre/"
+url = "about/"
 
 [[languages.es-mx.menu.main]]
 name = "Publicaciones"
 weight = 2
-url = "publicaciones/"
+url = "posts/"
 
 [[languages.es-mx.menu.main]]
 name = "Privacidad"
 weight = 3
-url = "privacidad/"
+url = "privacy/"
 
 [[languages.es-mx.menu.main]]
 name = "Contacto"
 weight = 5
-url = "contacto/"
+url = "contact/"
