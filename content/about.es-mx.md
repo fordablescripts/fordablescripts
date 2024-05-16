@@ -1,8 +1,8 @@
 +++
-title = "About"
-description = "Information about the author"
+title = "Sobre"
+description = "Información sobre el autor"
 date = "2024-03-23"
-aliases = ["about-me", "contact"]
+aliases = ["Acerca-de-mí"]
 author = "David Ford"
 +++
 

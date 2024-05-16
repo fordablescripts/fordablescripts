@@ -82,19 +82,19 @@ weight = 1
 url = "about/"
 
 [[languages.en.menu.main]]
-name = "Blog"
+name = "Posts"
 weight = 2
 url = "posts/"
 
-#[[languages.en.menu.main]]
-#name = "Projects"
-#weight = 3
-#url = "projects/"
+[[languages.en.menu.main]]
+name = "Privacy"
+weight = 3
+url = "privacy/"
 
-#[[languages.en.menu.main]]
-#name = "Contact me"
-#weight = 5
-#url = "contact/"
+[[languages.en.menu.main]]
+name = "Contact"
+weight = 5
+url = "contact/"
 
 [languages.es-mx]
 languageName = ":mexico:"
@@ -109,19 +109,19 @@ keywords = "blog,desarrollador,tecnología de la información"
 [[languages.es-mx.menu.main]]
 name = "Sobre"
 weight = 1
-url = "about/"
+url = "sobre/"
 
 [[languages.es-mx.menu.main]]
-name = "Blog"
+name = "Publicaciones"
 weight = 2
-url = "posts/"
+url = "publicaciones/"
 
-#[[languages.es-mx.menu.main]]
-#name = "Proyectos"
-#weight = 3
-#url = "projects/"
+[[languages.es-mx.menu.main]]
+name = "Privacidad"
+weight = 3
+url = "privacidad/"
 
-#[[languages.es-mx.menu.main]]
-#name = "Contacto"
-#weight = 5
-#url = "contact/"
+[[languages.es-mx.menu.main]]
+name = "Contacto"
+weight = 5
+url = "contacto/"
