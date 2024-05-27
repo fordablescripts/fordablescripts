@@ -1,37 +1,27 @@
 +++
 authors = "David Ford"
-title = "PowerShell with Randoms: Passwords"
+title = "PowerShell: with Randoms"
 date = "2024-05-10T23:12:56-04:00"
-description = "Having fun with randomness."
+description = "utilizing get-random in powershell"
 tags = [
     "powershell",
+    "get-random",
+    "security",
 ]
 categories = [
     "tutorial",
 ]
 +++
 
+PSVersion: 7.4  
+OS: Ubuntu 24.04 LTS
+
+TL;DR: [Get-Random Function Example](#script-example)
+
 <!--Intro-->
 
-Playing with Randoms can have its perks. This article goes over implementing a random object generator into your PowerShell scripts. 
+Playing with Randoms can have its perks. This article goes over implementing a random object generator into a PowerShell Function. 
 
-The PowerShell version that we'll be using in this article:
-
-```PowerShell
-PS /home/fordablescripts> $PSVersionTable
-
-Name                           Value
-----                           -----
-PSVersion                      7.4.2
-PSEdition                      Core
-GitCommitId                    7.4.2
-OS                             Ubuntu 24.04 LTS
-Platform                       Unix
-PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0…}
-PSRemotingProtocolVersion      2.3
-SerializationVersion           1.1.0.1
-WSManStackVersion              3.0
-```
 
 <!--Into the Rabbit Hole-->
 
@@ -39,7 +29,7 @@ WSManStackVersion              3.0
 
 Oxford defines Randomness as _the quality or state of lacking a pattern or principle of organization._ PowerShell has it's own builtin cmdlet to assist in implementing randomness within a script. A great example of implementing randomness is a password generator!
 
-Let's go over `Get-Random` and start with the information at hand:
+Let's start with the information on `Get-Help Get-Random`:
 
 ```PowerShell
 NAME
@@ -86,11 +76,11 @@ Please visit Matt's post for more information on those differences:
   https://powershellmagazine.com/2014/07/28/testing-the-effectiveness-of-get-random/
 
 
-For now, let's use `Get-SecureRandom` and implement it into a simple XKCD passphrase generator. For this Passphrase generator, we'll need a short script and a wordlist that you can find easily enough online. For this example, we're using a wordlist that's separating words by newline or `` `n ``.
+For now, let's use `Get-SecureRandom` and implement it into a simple XKCD passphrase generator. For this Passphrase generator, we'll need a short function and a wordlist that you can find easily enough online. For this example, we're using a wordlist that's separating words by newline or `` `n ``.
 
 ## Supercalifragilisticexpialidocious!
 
-Once we have our wordlist, let's start on the script. In this example, I'm creating a Function and setting parameters for the passphrase requirements. 
+Once we have our wordlist, let's start on the function. In this example, I'm setting parameters for the passphrase requirements:
 
 ```PowerShell
 Function Get-Passphrase {
@@ -142,9 +132,9 @@ Here we're setting the `$password` to `$null` for now and getting the `$wordlist
 
     return $password
 ```
-The script now sets a range between 1 and the set `$words` count. Then for each, we use `Get-SecureRandom` to select a random word from the wordlist. `if($FirstLetterUpper)` parameter is used, the first letter of each word is capitalized using `Get-Culture`. You can also swap this out for `$part.ToUpper().SubString(0,1) + $part.ToLower().SubString(1)`. After, we add a delimiter and then call the `$password` to finish.
+The cmdlet now sets a range between 1 and the set `$words` count. Then for each, we use `Get-SecureRandom` to select a random word from the wordlist. `if($FirstLetterUpper)` parameter is used, the first letter of each word is capitalized using `Get-Culture`. You can also swap this out for `$part.ToUpper().SubString(0,1) + $part.ToLower().SubString(1)`. After, we add a delimiter and then call the `$password` to finish.
 
-All together now:
+###### Function Example:
 
 ```PowerShell
 Function Get-Passphrase {
@@ -185,11 +175,14 @@ Function Get-Passphrase {
     return $password
 }
 ```
-Here is what an example call would look like:
+###### Example Call and Output:
 ```Powershell
 PS /home/fordablescripts> get-passphrase -words 5 -delimiter "-" -firstletterupper  
+
 Fold-Jawed-Style-Plane-Shove
 ```
-## Conclusion
 
-PowerShell can be a great tool to create random generating scripts and with PowerShell 7.4, `Get-SecureRandom` takes that security a step further. Of course, I recommend implementing an MFA service for truly secure access. Have fun coding!
+
+PowerShell can be a great tool to create random generating scripts and with PowerShell 7.4, `Get-SecureRandom` takes that security a step further. Of course, I recommend implementing an MFA service for truly secure access.
+
+_Get-Scripting_
