@@ -16,7 +16,7 @@ categories = [
 PSVersion: 7.4  
 OS: Ubuntu 24.04 LTS
 
-TL;DR: [Get-Random Function Example](#script-example)
+TL;DR: [Get-Random Function Example](#function-example)
 
 <!--Intro-->
 
