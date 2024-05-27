@@ -3,7 +3,7 @@ title = "FordableScripts"
 theme = "hugo-coder"
 languageCode = "en"
 defaultContentLanguage = "en"
-paginate = 6
+paginate = 7
 enableEmoji = true
 
 [markup.highlight]

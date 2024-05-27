@@ -42,7 +42,7 @@ Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sap
 
 ## Enlace
 
-Este es un [enlace interno](/posts/emoji-support) a otra página. [Este](https://www.gohugo.io) apunta a una página externa y se abrirá en una nueva etiqueta.
+Este es un [enlace interno](/posts/psrandoms) a otra página. [Este](https://www.gohugo.io) apunta a una página externa y se abrirá en una nueva etiqueta.
 
 ## Citas en bloque
 

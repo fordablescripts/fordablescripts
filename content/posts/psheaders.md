@@ -178,7 +178,7 @@ Filename:      SameScriptDifferentDay.ps1
 .Parameter UsefulInformation 
 Specifies work to be done and then does work.
 .LINK
-https://www.fordablescripts.com/posts/powershell-headers/
+https://www.fordablescripts.com/posts/psheaders/
 #>
 #blank line
 #blank line
