@@ -18,7 +18,7 @@ PSVersion: 7.4
 Sistema Operativo: Ubuntu 24.04 LTS
 
 
-TL;DR: [Ejemplo de Ayuda Basada en Comentarios]()
+TL;DR: [Ejemplo de Ayuda Basada en Comentarios](#ejemplo-de-ayuda-basada-en-comentarios)
 
 <!--Introducción-->
 
