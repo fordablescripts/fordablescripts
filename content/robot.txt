@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /tags
+Disallow: /cdn-cgi
+Sitemap: https://www.fordablscripts.com/sitemap.xml
