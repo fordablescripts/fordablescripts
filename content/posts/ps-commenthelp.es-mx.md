@@ -17,12 +17,11 @@ categories = [
 PSVersion: 7.4  
 Sistema Operativo: Ubuntu 24.04 LTS
 
-
 TL;DR: [Ejemplo de Ayuda Basada en Comentarios](#ejemplo-de-ayuda-basada-en-comentarios)
 
 <!--Introducción-->
 
-## Ayúdame a Ayudarte	  	 	 	
+## Ayúdame a Ayudarte
 
 El cmdlet `Get-Help` de PowerShell es una herramienta útil que se utiliza habitualmente para obtener detalles sobre comandos y módulos. Es igualmente _útil_ para funciones y scripts escritos por el usuario, ya que sirve como una forma estructurada de documentar el alcance, los parámetros, los ejemplos y cualquier nota adicional.
 
@@ -36,14 +35,17 @@ La ayuda basada en comentarios es el método más directo, donde escribe la docu
 
 Tienes dos opciones para crear comentarios:
 
-1. Anteponga a cada línea un símbolo de comentario (#).  
+1. Anteponga a cada línea un símbolo de comentario (#).
+
      ```powershell
      #.palabra clave de ayuda
      #ayudacontenido
      #.palabra clave de ayuda
      #ayudacontenido
      ```
-2. Utilice los símbolos <# y #> para crear un bloque de comentarios.  
+
+2. Utilice los símbolos <# y #> para crear un bloque de comentarios.
+
      ```powershell
      <#
      .palabra clave de ayuda
@@ -52,11 +54,13 @@ Tienes dos opciones para crear comentarios:
      contenido de ayuda
      #>
      ```
+
 Recuerde las siguientes reglas al utilizar la ayuda basada en comentarios:
 
 * Todas las líneas dentro de un bloque de comentarios se tratan como comentarios, pero solo los comentarios que contengan palabras clave se mostrarán en "Obtener ayuda".
 
-* Si un tema de ayuda basado en comentarios sigue a un comentario que no es de ayuda, deje al menos una línea en blanco entre el último comentario que no sea de ayuda y el inicio de la ayuda basada en comentarios:  
+* Si un tema de ayuda basado en comentarios sigue a un comentario que no es de ayuda, deje al menos una línea en blanco entre el último comentario que no sea de ayuda y el inicio de la ayuda basada en comentarios:
+
      ```powershell
      <#
      .palabra clave de ayuda
@@ -70,7 +74,8 @@ Recuerde las siguientes reglas al utilizar la ayuda basada en comentarios:
      ```
 
 * Las palabras clave definen diferentes secciones de ayuda basada en comentarios. Estas palabras clave (por ejemplo, .SYNOPSIS, .DESCRIPTION) no distinguen entre mayúsculas y minúsculas y pueden aparecer en cualquier orden.
-     * Palabras clave y descripciones de PowerShell[^1]:
+  * Palabras clave y descripciones de PowerShell[^1]:
+
     ```powershell
     <# 
     .SYNOPSIS
@@ -121,8 +126,9 @@ Recuerde las siguientes reglas al utilizar la ayuda basada en comentarios:
 
 * Al agregar ayuda basada en comentarios a una función, puede colocarla en uno de estos tres lugares:
 
-     * Al inicio del cuerpo de la función:  
-         ```powershell
+  * Al inicio del cuerpo de la función:
+
+     ```powershell
          function sifunciona {
              <#
              .palabra clave de ayuda
@@ -130,9 +136,11 @@ Recuerde las siguientes reglas al utilizar la ayuda basada en comentarios:
              #>
             function cuerpo
          }
-         ```
-     * Al final del cuerpo de la función:  
-         ```powershell
+    ```
+
+  * Al final del cuerpo de la función:
+
+    ```powershell
          function hacertrabajo {
             function cuerpo
              <#
@@ -140,9 +148,11 @@ Recuerde las siguientes reglas al utilizar la ayuda basada en comentarios:
              contenido de ayuda
              #>
          }
-         ```
-     * Directamente antes de la palabra clave de función. Sólo puede haber una línea en blanco o menos que separe la última línea de la ayuda de la función y la declaración de la función:
-         ```powershell    
+    ```
+
+  * Directamente antes de la palabra clave de función. Sólo puede haber una línea en blanco o menos que separe la última línea de la ayuda de la función y la declaración de la función:
+
+    ```powershell
          <#
          .palabra clave de ayuda
          contenido de ayuda
@@ -151,7 +161,7 @@ Recuerde las siguientes reglas al utilizar la ayuda basada en comentarios:
         function funciono {
             function cuerpo
          }
-         ```
+    ```
 
 * Para los scripts, la ayuda basada en comentarios puede estar situada al principio o al final del archivo del script. Si usa firma digital, escriba la ayuda basada en comentarios al principio, ya que el bloque de firma ocupa el final.
   
@@ -159,7 +169,7 @@ Recuerde las siguientes reglas al utilizar la ayuda basada en comentarios:
 
 <!--Ejemplo-->
 
-###### Ejemplo de Ayuda Basada en Comentarios:
+#### Ejemplo de Ayuda Basada en Comentarios
 
 ```powershell
 <# 
@@ -194,6 +204,6 @@ function mejorar {
 
 Siempre se recomienda escribir documentación, incluso cuando se trabaja solo. Acostúmbrate a incorporar comentarios de ayuda en tus scripts o funciones. En el futuro serás eternamente agradecido.
 
-_Get-Scripting_
+Get-Scripting
 
 [^1]:Palabras Clave de Ayuda Basadas en Comentarios. [Microsoft](https://learn.microsoft.com/en-us/powershell/scripting/developer/help/comment-based-help-keywords?view=powershell-7.4)

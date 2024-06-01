@@ -17,16 +17,15 @@ categories = [
 PSVersion: 7.4  
 OS: Ubuntu 24.04 LTS
 
-
 TL;DR: [Comment-Based Help Example](#comment-based-help-example)
 
 <!--Intro-->
 
-## Help Me Help You	 	 	 	
+## Help Me Help You
 
 The `Get-Help` cmdlet in PowerShell is a handy tool, commonly used for obtaining details about commands and modules. It’s equally _helpful_ for user-written scripts and functions, serving as a structured way to document the Scope, Parameters, Examples, and any additional Notes.
 
-There are three main ways to accomplish this: Comment-Based, XML-Based, and Online. In this Article, we will be going over Comment-Based Help. 
+There are three main ways to accomplish this: Comment-Based, XML-Based, and Online. In this Article, we will be going over Comment-Based Help.
 
 <!--Brief Overview-->
 
@@ -37,13 +36,16 @@ Comment-Based Help is the most direct method, where you write the documentation 
 You have two options for creating comments:
 
 1. Prefix each line with a comment symbol (#).  
+
     ```powershell
     #.helpkeyword
     #helpcontent
     #.helpkeyword
     #helpcontent
     ```
+
 2. Use the <# and #> symbols to create a comment block.  
+
     ```powershell
     <#
     .helpkeyword
@@ -52,11 +54,13 @@ You have two options for creating comments:
     helpcontent
     #>
     ```
+
 Remember the following rules when utilizing Comment-Based Help:
 
 * All lines within a comment block are treated as comments, but only comments containing Keywords will be shown in `Get-Help`.
 
-* If a comment-based help topic follows a non-help comment, leave at least one blank line between the last non-help comment and the start of the comment-based help:  
+* If a comment-based help topic follows a non-help comment, leave at least one blank line between the last non-help comment and the start of the comment-based help:
+
     ```powershell
     <#
     .helpkeyword
@@ -70,7 +74,9 @@ Remember the following rules when utilizing Comment-Based Help:
     ```
 
 * Keywords define different sections of comment-based help. These keywords (e.g., .SYNOPSIS, .DESCRIPTION) are case-insensitive and can appear in any order.
-    * PowerShell's Keywords and descriptions[^1]:
+
+* PowerShell's Keywords and descriptions[^1]:
+
     ```powershell
     <# 
     .SYNOPSIS
@@ -121,8 +127,9 @@ Remember the following rules when utilizing Comment-Based Help:
 
 * When adding comment-based help to a function, you can position it in one of three places:
 
-    * At the start of the function body:  
-        ```powershell
+  * At the start of the function body:
+
+    ```powershell
         function ifwork {
             <#
             .helpkeyword
@@ -130,9 +137,11 @@ Remember the following rules when utilizing Comment-Based Help:
             #>
             function body
         }
-        ```
-    * At the end of the function body:  
-        ```powershell
+    ```
+
+    * At the end of the function body:
+
+    ```powershell
         function dowork {
             function body
             <#
@@ -140,9 +149,11 @@ Remember the following rules when utilizing Comment-Based Help:
             helpcontent
             #>
         }
-        ```
+    ```
+
     * Directly before the function keyword. There can only be one blank line or less separating the function help’s last line and the function declaration:
-        ```powershell    
+
+    ```powershell
         <#
         .helpkeyword
         helpcontent
@@ -151,7 +162,7 @@ Remember the following rules when utilizing Comment-Based Help:
         function didwork {
             function body
         }
-        ```
+    ```
 
 * For scripts, comment-based help can be situated at the beginning or the end of the script's file. If using a digital signature, write the comment-based help at the beginning, as the signature block occupies the end.
   
@@ -159,8 +170,7 @@ Remember the following rules when utilizing Comment-Based Help:
 
 <!--Example-->
 
-###### Comment-Based Help Example:
-
+#### Comment-Based Help Example
 
 ```powershell
 <# 
@@ -195,6 +205,6 @@ function get-gud {
 
 Writing out documentation is always recommended, even when adventuring solo. Get in the habit of incorporating help comments in your scripts or functions. Future you will be eternally greatful.
 
-_Get-Scripting_
+Get-Scripting
 
 [^1]:Comment-Based Help Keywords. [Microsoft](https://learn.microsoft.com/en-us/powershell/scripting/developer/help/comment-based-help-keywords?view=powershell-7.4)

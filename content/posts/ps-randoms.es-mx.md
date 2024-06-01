@@ -61,7 +61,8 @@ DESCRIPTION
     includes `Get-SecureRandom`, which ensures cryptographically secure 
     randomness.
 ```
-¿Entendiste el párrafo de "Caution"? 
+
+¿Entendiste el párrafo de "Caution"?
 
 `Get-Random no garantiza una aleatoriedad criptográficamente segura.`
 
@@ -72,12 +73,11 @@ En este punto, surge una nueva pregunta; _¿Necesito aleatoriedad criptográfica
 Matt Graeber escribió una publicación en 2014 que cubría la eficacia de "Get-Random" en comparación con el uso de la clase .NET "System.Security.Cryptography.RNGCryptoServiceProvider".
 
 Por favor visite la publicación de Matt para obtener más información sobre esas diferencias:  
-  https://powershellmagazine.com/2014/07/28/testing-the-effectiveness-of-get-random/
-
+  <https://powershellmagazine.com/2014/07/28/testing-the-effectiveness-of-get-random/>
 
 Por ahora, usemos `Get-SecureRandom` e implementémoslo en un generador de contraseñas XKCD simple. Para este generador de frases de contraseña, necesitaremos una función corta y una lista de palabras que pueda encontrar fácilmente en línea. Para este ejemplo, estamos usando una lista de palabras que separa las palabras mediante una nueva línea o `` `n ``.
 
-## Supercalifragilísticoespialidoso
+### Supercalifragilísticoespialidoso
 
 Una vez que tengamos nuestra lista de palabras, comenzaremos con la función. En este ejemplo, estoy configurando parámetros para los requisitos de contraseña:
 
@@ -89,6 +89,7 @@ Function Obtener-Contrasena {
         [switch]$PrimeraLetraUpper  
     )
 ```
+
 El parámetro `$palabras` denota el número de palabras que queremos con un valor predeterminado de 4. `$delimitador` será nuestro separador entre palabras, y `$PrimeraLetraUpper` capitalizará la primera letra de cada palabra.  
 
 ```PowerShell
@@ -112,6 +113,7 @@ El parámetro `$palabras` denota el número de palabras que queremos con un valo
                 ($_.Length -eq ($rango[0] + 1)) -or ($_.Length -eq ($rango[1] + 1))
                 }
 ```
+
 Aquí estamos configurando la `$contrasena` en `$null` por ahora y obteniendo el contenido de `$listadepalabras` de la ubicación del archivo guardado. Para algunas tonterías adicionales, usaremos un modificador para `$palabras` de modo que el número de `$palabras` configurado también determinará la longitud de los caracteres de esas palabras. Por ejemplo, una contraseña `-palabras 2` tendrá de 8 a 9 caracteres por palabra y una frase de contraseña `-palabras 5` tendrá de 4 a 5 caracteres por palabra. Esto ayuda a garantizar que el número total de caracteres de la frase de contraseña se mantenga dentro de la longitud normal de la contraseña.
 
 ```PowerShell
@@ -131,9 +133,10 @@ Aquí estamos configurando la `$contrasena` en `$null` por ahora y obteniendo el
 
     return $contrasena
 ```
+
 El cmdlet ahora establece un rango entre 1 y el recuento de `$palabras` establecido. Luego, para cada uno, usamos `Get-SecureRandom` para seleccionar una palabra aleatoria de la lista de palabras. Si se usa el parámetro `if($PrimeraLetraUpper)`, la primera letra de cada palabra se escribe en mayúscula usando `Get-Culture`. También puedes cambiar esto por `$parte.ToUpper().SubString(0,1) + $parte.ToLower().SubString(1)`. Luego, agregamos un delimitador y luego llamamos a `$contrasena` para finalizar.
 
-###### Ejemplo de Funcion:
+#### Ejemplo de Funcion
 
 ```PowerShell
 Function Obtener-Contrasena {
@@ -174,7 +177,9 @@ Function Obtener-Contrasena {
     return $contrasena
 }
 ```
-###### Ejemplo de Llamada y Salida:
+
+##### Ejemplo de Llamada y Salida
+
 ```Powershell
 PS /home/fordablescripts> Obtener-Contrasena -palabras 5 -delimitador "-" -PrimeraLetraUpper  
 
@@ -183,4 +188,4 @@ Fold-Jawed-Style-Plane-Shove
 
 PowerShell puede ser una gran herramienta para crear secuencias de comandos de generación aleatoria y con PowerShell 7.4, `Get-SecureRandom` lleva esa seguridad un paso más allá. Por supuesto, recomiendo implementar un servicio MFA para un acceso realmente seguro.
 
-_Get-Scripting_
+Get-Scripting

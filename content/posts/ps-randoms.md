@@ -20,8 +20,7 @@ TL;DR: [Get-Random Function Example](#function-example)
 
 <!--Intro-->
 
-Playing with Randoms can have its perks. This article goes over implementing a random object generator into a PowerShell Function. 
-
+Playing with Randoms can have its perks. This article goes over implementing a random object generator into a PowerShell Function.
 
 <!--Into the Rabbit Hole-->
 
@@ -62,6 +61,7 @@ DESCRIPTION
     includes `Get-SecureRandom`, which ensures cryptographically secure 
     randomness.
 ```
+
 Did you catch the Caution paragraph?  
 
 `Get-Random doesn't ensure cryptographically secure randomness.`
@@ -73,12 +73,11 @@ At this point, a new question emerges; _Do I need cryptographically secure rando
 Matt Graeber wrote a post back in 2014 that covered the effectiveness of `Get-Random` in comparison to using `System.Security.Cryptography.RNGCryptoServiceProvider` .NET class.
 
 Please visit Matt's post for more information on those differences:  
-  https://powershellmagazine.com/2014/07/28/testing-the-effectiveness-of-get-random/
-
+  <https://powershellmagazine.com/2014/07/28/testing-the-effectiveness-of-get-random/>
 
 For now, let's use `Get-SecureRandom` and implement it into a simple XKCD passphrase generator. For this Passphrase generator, we'll need a short function and a wordlist that you can find easily enough online. For this example, we're using a wordlist that's separating words by newline or `` `n ``.
 
-## Supercalifragilisticexpialidocious!
+### Supercalifragilisticexpialidocious
 
 Once we have our wordlist, let's start on the function. In this example, I'm setting parameters for the passphrase requirements:
 
@@ -90,6 +89,7 @@ Function Get-Passphrase {
         [switch]$FirstLetterUpper  
     )
 ```
+
 The `$words` parameter denotes the number of words we want with a default of 4. `$delimiter` will be our separator between words, and `$FirstLetterUpper` capitalizes the first letter of each word.  
 
 ```PowerShell
@@ -113,6 +113,7 @@ The `$words` parameter denotes the number of words we want with a default of 4. 
                 ($_.Length -eq ($range[0] + 1)) -or ($_.Length -eq ($range[1] + 1))
                 }
 ```
+
 Here we're setting the `$password` to `$null` for now and getting the `$wordlist` content from the saved file path. For some extra sillies, we'll use a switch for `$words` so that the number of `$words` set will also determine the length of characters of those words. For example, a `-words 2` password will be 8 or 9 characters in length per word and a `-words 5` passphrase will be 4 to 5 characters per word. This helps to ensure that the total number of characters for the passphrase stays within a normal password length.
 
 ```PowerShell
@@ -132,9 +133,10 @@ Here we're setting the `$password` to `$null` for now and getting the `$wordlist
 
     return $password
 ```
+
 The cmdlet now sets a range between 1 and the set `$words` count. Then for each, we use `Get-SecureRandom` to select a random word from the wordlist. `if($FirstLetterUpper)` parameter is used, the first letter of each word is capitalized using `Get-Culture`. You can also swap this out for `$part.ToUpper().SubString(0,1) + $part.ToLower().SubString(1)`. After, we add a delimiter and then call the `$password` to finish.
 
-###### Function Example:
+#### Function Example
 
 ```PowerShell
 Function Get-Passphrase {
@@ -175,14 +177,15 @@ Function Get-Passphrase {
     return $password
 }
 ```
-###### Example Call and Output:
+
+#### Example Call and Output
+
 ```Powershell
 PS /home/fordablescripts> get-passphrase -words 5 -delimiter "-" -firstletterupper  
 
 Fold-Jawed-Style-Plane-Shove
 ```
 
-
 PowerShell can be a great tool to create random generating scripts and with PowerShell 7.4, `Get-SecureRandom` takes that security a step further. Of course, I recommend implementing an MFA service for truly secure access.
 
-_Get-Scripting_
+Get-Scripting

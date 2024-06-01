@@ -5,4 +5,4 @@ date = "2024-05-15"
 aliases = ["contact-me"]
 author = "David Ford"
 +++
-Contact me Contact@FordableScripts.com
+Contact me <mailto:Contact@FordableScripts.com>

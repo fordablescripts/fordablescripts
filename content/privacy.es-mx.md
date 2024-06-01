@@ -116,7 +116,6 @@ Los Servicios no están destinados a ser utilizados por niños y no recopilamos 
 
 A partir de la Fecha de entrada en vigor de esta Política de privacidad, no tenemos conocimiento real de que "compartimos" o "vendemos" (como se definen esos términos en la ley aplicable) información personal de personas menores de 16 años.
 
-
 ### Seguridad y retención de su información
 
 Tenga en cuenta que ninguna medida de seguridad es perfecta o impenetrable y no podemos garantizar una "seguridad perfecta". Además, es posible que la información que nos envíe no esté segura mientras esté en tránsito. Le recomendamos que no utilice canales no seguros para comunicarnos información sensible o confidencial.
@@ -136,7 +135,6 @@ Puede ejercer cualquiera de estos derechos donde se indica en nuestro Sitio o co
 
 No lo discriminaremos por ejercer cualquiera de estos derechos. Es posible que necesitemos recopilar información suya para verificar su identidad, como su dirección de correo electrónico o información de su cuenta, antes de brindar una respuesta sustancial a la solicitud. De acuerdo con las leyes aplicables, usted puede designar a un agente autorizado para realizar solicitudes en su nombre para ejercer sus derechos. Antes de aceptar dicha solicitud de un agente, le exigiremos que proporcione prueba de que usted le ha autorizado a actuar en su nombre y es posible que necesitemos que verifique su identidad directamente con nosotros. Responderemos a su solicitud de manera oportuna según lo exige la ley aplicable.
 
-
 ### Quejas
 
 Si tiene quejas sobre cómo procesamos su información personal, comuníquese con nosotros utilizando los datos de contacto que se proporcionan a continuación. Si no está satisfecho con nuestra respuesta a su queja, dependiendo de dónde viva, puede tener derecho a apelar nuestra decisión comunicándose con nosotros utilizando los datos de contacto que se indican a continuación, o presentar su queja ante su autoridad local de protección de datos.
@@ -148,4 +146,4 @@ Si transferimos su información personal fuera de Europa, nos basaremos en mecan
 
 ### Contacto
 
-Si tiene alguna pregunta sobre nuestras prácticas de privacidad o esta Política de privacidad, o si desea ejercer cualquiera de los derechos disponibles para usted, envíe un correo electrónico a Contact@FordableScripts.com.
+Si tiene alguna pregunta sobre nuestras prácticas de privacidad o esta Política de privacidad, o si desea ejercer cualquiera de los derechos disponibles para usted, envíe un correo electrónico a <mailto:Contact@FordableScripts.com>.
