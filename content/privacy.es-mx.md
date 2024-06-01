@@ -5,9 +5,10 @@ date = "2024-05-15"
 aliases = ["Privacidad"]
 author = "David Ford"
 +++
+
 Última actualización: 15/05/2024
 
-Esta Política de Privacidad describe cómo FordableScripts (el "Sitio", "nosotros", "nos" o "nuestro") recopila, utiliza y divulga su información personal cuando visita, utiliza nuestros servicios o realiza una compra en https:/ /www.fordablescripts.com (el "Sitio") o comunicarse de otro modo con nosotros (colectivamente, los "Servicios"). A los efectos de esta Política de Privacidad, "usted" y "su" significan usted como usuario de los Servicios, ya sea un cliente, un visitante del sitio web u otra persona cuya información hayamos recopilado de conformidad con esta Política de Privacidad.
+Esta Política de Privacidad describe cómo FordableScripts (el "Sitio", "nosotros", "nos" o "nuestro") recopila, utiliza y divulga su información personal cuando visita, utiliza nuestros servicios o realiza una compra en <https:\\www.fordablescripts.com> (el "Sitio") o comunicarse de otro modo con nosotros (colectivamente, los "Servicios"). A los efectos de esta Política de Privacidad, "usted" y "su" significan usted como usuario de los Servicios, ya sea un cliente, un visitante del sitio web u otra persona cuya información hayamos recopilado de conformidad con esta Política de Privacidad.
 
 Lea atentamente esta Política de privacidad. Al utilizar y acceder a cualquiera de los Servicios, usted acepta la recopilación, el uso y la divulgación de su información como se describe en esta Política de Privacidad. Si no está de acuerdo con esta Política de Privacidad, no utilice ni acceda a ninguno de los Servicios.
 
@@ -146,4 +147,4 @@ Si transferimos su información personal fuera de Europa, nos basaremos en mecan
 
 ### Contacto
 
-Si tiene alguna pregunta sobre nuestras prácticas de privacidad o esta Política de privacidad, o si desea ejercer cualquiera de los derechos disponibles para usted, envíe un correo electrónico a <mailto:Contact@FordableScripts.com>.
+Si tiene alguna pregunta sobre nuestras prácticas de privacidad o esta Política de privacidad, o si desea ejercer cualquiera de los derechos disponibles para usted, envíe un correo electrónico a [Contact@FordableScripts.com](mailto:Contact@FordableScripts.com).
