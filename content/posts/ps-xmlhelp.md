@@ -1,6 +1,6 @@
 +++
 authors = "David Ford"
-title = "PowerShell: Headers, XML-Based Help"
+title = "PowerShell: Get-Help, XML-Based Help"
 date = "2024-06-15T12:00:00-04:00"
 description = "documentation guidelines for XML-based Help"
 tags = [

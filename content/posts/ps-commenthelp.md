@@ -1,6 +1,6 @@
 +++
 authors = "David Ford"
-title = "PowerShell: Headers, Comment-Based Help"
+title = "PowerShell: Get-Help, Comment-Based Help"
 date = "2024-05-27T12:00:00-04:00"
 description = "documentation guidelines for comment-based Help"
 tags = [

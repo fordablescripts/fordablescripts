@@ -1,6 +1,6 @@
 +++
 authors = "David Ford"
-title = "PowerShell: Encabezados, Ayuda Basada en Comentarios"
+title = "PowerShell: Get-Help, Ayuda Basada en Comentarios"
 date = "2024-05-27T12:00:00-04:00"
 description = "directrices de documentación para la ayuda basada en comentarios"
 tags = [
