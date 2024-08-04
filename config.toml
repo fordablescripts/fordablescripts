@@ -75,7 +75,7 @@ type = "application/rss+xml"
 
 [[params.social]]
 name = "Donate"
-icon = "fa fa-coffee fa-2x"
+icon = "fa-solid fa-coffee fa-2x"
 weight = 8
 url = "https://ko-fi.com/fordablescripts"
 
