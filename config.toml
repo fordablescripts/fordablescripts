@@ -66,18 +66,18 @@ weight = 4
 url = "https://www.linkedin.com/in/davidford07/"
 
 [[params.social]]
+name = "Donate"
+icon = "fa-solid fa-coffee fa-2x"
+weight = 8
+url = "https://ko-fi.com/fordablescripts"
+
+[[params.social]]
 name = "RSS"
 icon = "fa-solid fa-rss fa-2x"
 weight = 6
 url = "https://www.fordablescripts.com/index.xml"
 rel = "alternate"
 type = "application/rss+xml"
-
-[[params.social]]
-name = "Donate"
-icon = "fa-solid fa-coffee fa-2x"
-weight = 8
-url = "https://ko-fi.com/fordablescripts"
 
 [languages.en]
 languageName = ":us:"
