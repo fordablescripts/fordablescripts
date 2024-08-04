@@ -73,6 +73,12 @@ url = "https://www.fordablescripts.com/index.xml"
 rel = "alternate"
 type = "application/rss+xml"
 
+[[params.social]]
+name = "Donate"
+icon = "fa fa-coffee fa-2x"
+weight = 8
+url = "https://ko-fi.com/fordablescripts"
+
 [languages.en]
 languageName = ":us:"
 
